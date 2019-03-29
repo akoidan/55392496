@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>my-project2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta property="og:title" content="my-project2"/>
+    <meta property="og:image" content="favicon.ico"/>
+    <meta property="og:site_name" content="my-project2"/>
+    <meta property="og:description" content=""/>
+    <meta http-equiv="Pragma" content="no-cache">
+    <% if (htmlWebpackPlugin.files.jsIntegrity) { %><script crossorigin="<%= webpackConfig.output.crossOriginLoading %>" integrity="<%= htmlWebpackPlugin.files.jsIntegrity[0] %>" type="text/javascript" src="<%= htmlWebpackPlugin.files.js[0] %>"></script><% } else{ %><script crossorigin="<%= webpackConfig.output.crossOriginLoading %>" type="text/javascript" src="<%= htmlWebpackPlugin.files.js[0] %>"></script><% } %>
+    <% for (key in htmlWebpackPlugin.files.css) { %><link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.files.css[key] %>"><% } %>
+</head>
+<body><div id="app"></div></body>
+</html>
